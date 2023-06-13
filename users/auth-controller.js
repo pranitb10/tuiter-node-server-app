@@ -32,8 +32,7 @@ const AuthController = (app) => {
 
   const profile = (req, res) => {
     const currentUser = req.session["currentUser"];
-    // const currentUser = null;
-    // return;
+    console.log(currentUser);
     if (!currentUser) {
       res.sendStatus(404);
       return;
@@ -61,4 +60,5 @@ const AuthController = (app) => {
  app.post("/api/users/logout",   logout);
  app.put ("/api/users",          update);
 };
+
 export default AuthController;

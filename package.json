@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranitb10/tuiter-node-server-app"
+  },
   "keywords": [
     "Node",
     "REST",

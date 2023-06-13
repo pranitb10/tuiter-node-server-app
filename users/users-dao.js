@@ -34,7 +34,6 @@ export const createUser = (user) => {
 
 
 export const updateUser = (user) => {
-    // console.log(user, users);
  const index = users.findIndex((u) => u._id === user.user._id);
  
  console.log("\n\n\nupdate : " ,user.user, index)
