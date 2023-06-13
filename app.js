@@ -18,7 +18,7 @@ app.use(
 app.use(
     cors({
       credentials: true,
-      origin: "https://cs5610-tuiter-react-web-app-pranitb10.netlify.app/",
+      origin: "https://cs5610-tuiter-react-web-app-pranitb10.netlify.app",
     })
    );
    
