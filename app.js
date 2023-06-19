@@ -8,20 +8,27 @@ import cors from 'cors'
 const app = express();
 
 import mongoose from "mongoose";
-mongoose.connect("mongodb://127.0.0.1:27017/tuiter");
+
+const MONGODB_CONN_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/tuiter";
+
+mongoose.connect(MONGODB_CONN_STRING);
 
 app.use(
     session({
       secret: "any string",
       resave: false,
       saveUninitialized: true,
+      cookie: {
+        sameSite : "none",
+        secure : true
+      }
     })
    );
    
 app.use(
     cors({
       credentials: true,
-      origin: "https://cs5610-tuiter-react-web-app-pranitb10.netlify.app",
+      origin: "http://localhost:3000",
     })
    );
    
