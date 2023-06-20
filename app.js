@@ -9,7 +9,7 @@ const app = express();
 
 import mongoose from "mongoose";
 
-const MONGODB_CONN_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/tuiter";
+const MONGODB_CONN_STRING = "mongodb+srv://pranitb10:webdeva6@cluster0.ofiz42d.mongodb.net/tuiter?retryWrites=true&w=majority";
 
 mongoose.connect(MONGODB_CONN_STRING);
 
